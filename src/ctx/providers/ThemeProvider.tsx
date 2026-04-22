@@ -14,7 +14,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     else return "light";
   });
   useLayoutEffect(() => {
-    document.documentElement.style.colorScheme = theme;
+    document.documentElement.style.setProperty("color-scheme", theme, "important");
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("site-theme", theme);
   }, [theme]);
