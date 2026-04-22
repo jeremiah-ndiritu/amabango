@@ -1,6 +1,6 @@
 import { createContext, type SetStateAction } from "react"
 
-export type Theme = "light" | "dark"
+export type Theme = "light" | "dark" | "system"
 export type ThemeContextType = {
     theme: Theme
     setTheme: React.Dispatch<SetStateAction<Theme>>

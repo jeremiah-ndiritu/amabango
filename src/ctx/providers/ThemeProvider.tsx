@@ -4,7 +4,7 @@ import { ThemeContext, type Theme } from "../contexts/ThemeContentext";
 export default function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem("site-theme");
-    if (saved === "light" || saved === "dark") {
+    if (saved === "light" || saved === "dark" || saved === "system") {
       return saved as Theme;
     }
     const prefersDark = window.matchMedia(
@@ -14,7 +14,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     else return "light";
   });
   useLayoutEffect(() => {
-    document.documentElement.style.setProperty("color-scheme", theme, "important");
+    document.documentElement.style.setProperty("color-scheme", theme === "system" ? "light dark" : theme, "important");
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("site-theme", theme);
   }, [theme]);
