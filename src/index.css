@@ -53,7 +53,7 @@
   font: 18px/145% var(--font-sans);
   letter-spacing: 0.18px;
 
-  color-scheme: light dark;
+  color-scheme: light system;
 
   color: var(--color-text);
   background: var(--color-bg);
@@ -61,6 +61,9 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+[data-theme="dark"]{
+  color-scheme: dark;
 }
 
 @media (max-width: 1024px) {
