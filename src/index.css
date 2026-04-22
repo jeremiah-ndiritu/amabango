@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* =========================
+   THEME TOKENS (Tailwind v4)
+========================= */
+@theme {
+  /* 🎨 Brand Colors (Gold System) */
+  --color-gold-light: #FFD700;
+  --color-gold: #DAA520;
+  --color-gold-deep: #B8860B;
+
+  --color-black: #000000;
+  --color-charcoal: #1C1C1C;
+
+  /* 🌗 Semantic Colors (auto light/dark) */
+  --color-bg: light-dark(#ffffff, #0f0f0f);
+  --color-surface: light-dark(#ffffff, #1c1c1c);
+
+  --color-text: light-dark(#4b5563, #9ca3af);
+  --color-text-strong: light-dark(#0a0a0a, #f3f4f6);
+
+  --color-border: light-dark(#e5e7eb, #2a2a2a);
+  --color-code-bg: light-dark(#f5f5f5, #1a1a1a);
+
+  /* --color-ld-charcoal:  */
+
+
+  /* 🔥 Accent (luxury gold feel) */
+  --color-primary: light-dark(var(--color-gold), var(--color-gold-light));
+  --color-primary-muted: light-dark(color-mix(in srgb, var(--color-gold) 20%, transparent),
+      color-mix(in srgb, var(--color-gold-light) 20%, transparent));
+  --color-primary-border: light-dark(color-mix(in srgb, var(--color-gold) 50%, transparent),
+      color-mix(in srgb, var(--color-gold-light) 50%, transparent));
+
+  /* 🧱 UI */
+  --color-card: light-dark(#ffffff, #181818);
+  --color-social-bg: light-dark(#f5f5f5, #242424);
+
+  /* 🌫 Shadows */
+  --shadow-base: light-dark(0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+      0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3));
+
+  /* 🔤 Fonts */
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+:root {
+  font: 18px/145% var(--font-sans);
+  letter-spacing: 0.18px;
+
+  color-scheme: light dark;
+
+  color: var(--color-text);
+  background: var(--color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   LAYOUT
+========================= */
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  border-inline: 1px solid var(--color-border);
+
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-text-strong);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+/* =========================
+   CODE + UI ELEMENTS
+========================= */
+code {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  background: var(--color-code-bg);
+  color: var(--color-text-strong);
+}

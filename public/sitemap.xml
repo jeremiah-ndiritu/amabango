@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://simitechdesigns.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main pages -->
+  <url>
+    <loc>https://simitechdesigns.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simitechdesigns.com/contacts</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services root -->
+  <url>
+    <loc>https://simitechdesigns.com/services</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services subpages -->
+  <url>
+    <loc>https://simitechdesigns.com/services/webdev</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simitechdesigns.com/services/autocad</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simitechdesigns.com/services/it</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
