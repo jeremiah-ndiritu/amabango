@@ -63,10 +63,10 @@
   -webkit-font-smoothing: antialiased;
 }
 [data-theme="dark"]{
-  color-scheme: dark;
+  color-scheme: dark !important;
 }
 [data-theme="light"] {
-  color-scheme: light;
+  color-scheme: light !important;
 }
 
 @media (max-width: 1024px) {
