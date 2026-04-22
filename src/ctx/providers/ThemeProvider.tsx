@@ -10,7 +10,15 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     return "system";
   });
   useLayoutEffect(() => {
-    document.documentElement.style.setProperty("color-scheme", theme === "system" ? "light dark" : theme, "important");
+    document.documentElement.style.setProperty(
+      "color-scheme",
+      theme === "system"
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+        : theme,
+      "important",
+    );
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("site-theme", theme);
   }, [theme]);
